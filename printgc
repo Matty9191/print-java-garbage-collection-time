@@ -21,11 +21,6 @@
 #   This script requires that the JVM was started with the "-XX:+PrintGCApplicationStoppedTime"
 #   and "-XX:+PrintGCApplicationConcurrentTime" options.
 #
-# License:
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-#
 # Example:
 #   $ gctime gc.log
 #   Total execution time               : 66.30secs
@@ -34,8 +29,7 @@
 #   % of time application ran          : 83.65%
 #   % of time application was stopped  : 16.35%
 
-if [ ! -f "${1}" ]
-then
+if [ ! -f "${1}" ]; then
     echo "Usage: $0 <GC Log>"
     exit 1
 fi
